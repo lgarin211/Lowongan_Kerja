@@ -46,3 +46,7 @@ Route::group(['middleware' => 'auth'], function () {
     // Cetak PDF
     Route::get('/data-pelamar/{pelamar}/cetak', 'AdminController@cetak')->name('admin.cetak');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
